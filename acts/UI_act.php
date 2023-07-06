@@ -1,7 +1,7 @@
 <!doctype html>
 <?php 
 include 'Person_act.php';
-$personObj = new Person;
+
 
 ?>
 <html lang="en">
@@ -39,7 +39,7 @@ $personObj = new Person;
                     $lname = $_POST['lname'];
                     $birthyear = $_POST['birthyear'];
                     $current_year = $_POST['current_year'];
-                    $personObj->giveValues($fname,$lname,$birthyear,$current_year);
+                    $personObj = new Person($fname,$lname,$birthyear,$current_year);
 
                     echo "<div class='alert alert-success mt-3'>The name is: ".$personObj->getName()." </div>";
                     echo "<div class='alert alert-success mt-3'>The lastname is: ".$personObj->getLastName()." </div>";

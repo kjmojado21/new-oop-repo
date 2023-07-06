@@ -6,7 +6,7 @@ class School{
     private $lab;
 
 
-    function setValues($level,$totalUnits,$lab){
+    function setValues($level,$totalUnits,$lab){ // construct
        
         $this->level = $level;
         $this->totalUnits = $totalUnits;
@@ -17,7 +17,7 @@ class School{
 
     function pricePerUnit(){ //determine price per year level(no calculation)
         if($this->level == 'first_year'){
-            return 550;
+            return 550 ;
 
         }elseif($this->level == 'second_year'){
             return  630;
@@ -52,11 +52,11 @@ class School{
         }
     }
 
+    public function getYearLevel(){
+        return $this->level;
+    }
 
-    
- 
-   
-   
+
     public function totalTuition(){
         return $this->totalUnitPrice() + $this->get_lab();
     }

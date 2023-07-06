@@ -9,16 +9,20 @@ class Person{
 
 
 
-    function giveValues($name,$Lastname,$birthyear,$year){
+    function __construct($name,$Lastname,$birthyear,$year)
+    {
         $this->name = $name;
         $this->lastname = $Lastname;
         $this->birthyear = $birthyear;
         $this->year = $year;
-
     }
+        
+
+    
 
     function calculateAge(){
         $age = $this->year - $this->birthyear;
+        // return $this->year = $this->birthyear;
 
         return $age;
 

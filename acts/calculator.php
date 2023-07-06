@@ -6,7 +6,7 @@
     private $operator;
 
 
-    function set_values($num1,$num2,$operator){
+    function __construct($num1,$num2,$operator){
         $this->num1 = $num1;
         $this->num2 = $num2;
         $this->operator = $operator;
@@ -25,7 +25,7 @@
             return $this->num1 * $this->num2;
 
         }
-        else{
+        else{   
             return $this->num1 / $this->num2;
         }
 

@@ -37,14 +37,14 @@
     <?php
         include 'calculator.php';
 
-        $calc = new Calculator();
-
+       
         if(isset($_POST['calculate'])){
             $num1 = $_POST['num1'];
             $num2 = $_POST['num2'];
             $calculate = $_POST['operator'];
 
-            $calc->set_values($num1,$num2,$calculate);
+            $calc = new Calculator($num1,$num2,$calculate);
+
 
             echo "<div class = 'alert alert-success'>The Answer is: ".$calc->get_calculation()."</div>";
 
